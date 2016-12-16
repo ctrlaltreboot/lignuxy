@@ -1,0 +1,48 @@
+## source me to add additional functionality to your shell
+
+# mp423
+# sometimes i download mp4s and i want them reduced by 1.
+function mp423() {
+  VIDEO=$1
+  AUDIO=$(basename $VIDEO)
+
+  if [[ -f $VIDEO && -s $VIDEO ]]; then
+    ffmpeg -i $VIDEO -b:a 192K -vn $AUDIO.mp3
+  else
+    echo 'A need for mp4 file as input has arised.'
+  fi
+}
+
+# spacecape, replaces invisible spaces with visible the escaped character equivalent '\n'
+# I use this mostly for making json compatible strings, so the filename output is in json.
+function spacecape() {
+  SPACED_FILE=$1
+  SPACED_JSON=${SPACED_FILE}.json
+
+  if [[ -f ${SPACED_FILE} ]]; then
+    cat ${SPACED_FILE} | sed s/$/\\\\n/ | tr -d '\n' > ${SPACED_JSON}
+    echo "Want space? You got space! Happy times!"
+    exit 0
+  else
+    echo "I need a file to make me happy"
+    exit 1
+  fi
+}
+
+function ipmireset() {
+  NODE=${1?"Error: Missing host/node address"}
+  ipmitool -H $NODE -U haha -P hoho chassis power reset
+}
+
+function ipmisol() {
+  NODE=${1?"Error: Missing host/node address"}
+  ipmitool -H $NODE -I lanplus -U haha -P hoho sol activate
+}
+
+# never uncomment
+# ipmitool -H $NODE -U haha -p hoho chassis identify 1
+function freakthenetops() {
+  for NODE in `cat $HOME/iad1nodes.txt`; do
+    echo $NODE
+  done
+}

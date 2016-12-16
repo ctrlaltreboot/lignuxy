@@ -1,0 +1,8 @@
+# source this file
+# this file is home to all sorts of exports and sourcing
+
+[[ -f ${HOME}/.functions ]] && source ${HOME}/.functions
+[[ -f ${HOME}/.aliases ]] && source ${HOME}/.aliases
+[[ -f ${HOME}/.envars ]] && source ${HOME}/.envars
+[[ -f ${HOME}/.rvmrc ]] && source ${HOME}/.rvmrc
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

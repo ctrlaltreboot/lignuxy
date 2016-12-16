@@ -1,0 +1,77 @@
+
+alias httpy='python -m SimpleHTTPServer 8080'
+
+# ruby
+alias rs='rspec spec'
+
+# bundle
+alias be='bundle exec'
+alias bi='bundle install'
+alias bibb='bundle install --path .bundle/bundle'
+
+# berkshelf 3
+alias bebv='bundle exec berks vendor'
+
+# berkshelf 2
+alias bebi='bundle exec berks install'
+alias bebu='bundle exec berks update'
+
+# test-kitchen
+alias bek='bundle exec kitchen'
+alias bekc='bundle exec kitchen converge'
+alias bekv='bundle exec kitchen verify'
+alias bekt='bundle exec kitchen test'
+alias bekl='bundle exec kitchen login'
+
+# knife
+alias ksdb='be knife solo data bag'
+alias kdb='knife solo data bag'
+
+# aws cli
+alias ec2-use1='aws ec2 --region us-east-1'
+alias ec2-usw1='aws ec2 --region us-west-1'
+alias ec2-usw2='aws ec2 --region us-west-2'
+alias ec2-euw1='aws ec2 --region eu-west-1'
+alias ec2-sae1='aws ec2 --region sa-east-1'
+alias ec2-apne1='aws ec2 --region ap-northeast-1'
+alias ec2-apse1='aws ec2 --region ap-southeast-1'
+alias ec2-apse2='aws ec2 --region ap-southeast-2'
+
+# git
+alias gco='git checkout'
+alias ga='git add'
+alias gc='git commit'
+alias gcv='git commit -v'
+alias gst='git status'
+alias gl='git log --oneline --graph --all --decorate'
+alias gpr='git pull --rebase'
+alias gba='git branch -a'
+alias gb='git branch'
+alias gri='git rebase -i'
+alias grshow='git remote show origin'
+alias grprune='git remote prune origin'
+
+# ofcmac
+alias ravz-del='rsync -avz --delete --progress'
+alias ravz='rsync -avz --progress'
+
+# tarsnap
+alias ts='tarsnap --keyfile ~/.tarsnap.key'
+
+# openvpn
+alias bosvpn='sudo openvpn --config ~/Workspace/tremor/openvpn/boston/client.ovpn &'
+
+# ansibells
+alias acheggit='ansible-playbook -s site.yml -C'
+alias acheggv='ansible-playbook -s site.yml -C --vault-password-file=$HOME/.vault'
+
+# ansible-vault
+alias avaultenc='ansible-vault encrypt --vault-password-file=~/.vault'
+alias avaultdec='ansible-vault decrypt --vault-password-file=~/.vault'
+
+# molecule
+alias molcreate='molecule create'
+alias molconv='molecule converge'
+alias molrm='molecule destroy'
+alias molver='molecule verify'
+alias mologin='molecule login'

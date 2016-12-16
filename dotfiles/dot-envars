@@ -1,0 +1,8 @@
+export LANGUAGE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export TIMESTAMP=$(date +"%Y%d%m%H%M%S")
+export EDITOR=vim
+export GOPATH=$HOME/Workspace/Go
+export PATH=$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export RBENV_VERSION=2.2.2
