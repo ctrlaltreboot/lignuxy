@@ -8,7 +8,5 @@ xcode-select --install || true
 # get install script via curl and install via ruby
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
 # install
 brew bundle
-

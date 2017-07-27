@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copies local ~/.<dotfile> into dot-<file>.
 
 # turn on nullglob to get array of files without wonky use of ls
 shopt -s nullglob
