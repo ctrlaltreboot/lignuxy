@@ -1,10 +1,8 @@
 setdev
 ======
 
-Collection of collective stuff that's too sophomoric it doesn't make
-sense to put it in git other than having the convenience of having it in
-git.
+Sets up my machine for development use.
 
-Do not use. Mine. All mine.
+#### Usage
 
-Ok.
+TBD
