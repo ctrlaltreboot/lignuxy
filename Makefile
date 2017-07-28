@@ -32,5 +32,5 @@ list:
 	awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | \
 	sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
 
-all: homebrew vundler ohmyzsh \
-	rbenv ansible misc import_dotfiles
+all: homebrew ohmyzsh rbenv import_dotfiles \
+	vundler ansible misc
