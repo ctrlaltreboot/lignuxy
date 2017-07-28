@@ -3,12 +3,13 @@
 
 # turn on nullglob to get array of files without wonky use of ls
 shopt -s nullglob
-DOTFILES=(dot-*)
+DOTFILES=(dotfiles/dot-*)
 
 # iterate through dot-* files and put them inside an array
 for DF in ${DOTFILES[@]}; do
+    D=$(basename ${DF})
     # remove the dot- prefix off the name
-    DOTFILE=$HOME/.${DF#dot-}
+    DOTFILE=$HOME/.${D#dot-}
     # copy back the edited dotfiles from $HOME
     # don't worry - you can review changes since it's in Git
     [[ -e $DOTFILE ]] && cp -v $DOTFILE $(pwd)/$DF
