@@ -9,4 +9,5 @@ xcode-select --install || true
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install
-brew bundle
+MY_PATH=$(pwd)
+brew bundle --file=${MY_PATH}/Brewfile
