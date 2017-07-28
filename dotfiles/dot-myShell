@@ -4,5 +4,5 @@
 [[ -f ${HOME}/.functions ]] && source ${HOME}/.functions
 [[ -f ${HOME}/.aliases ]] && source ${HOME}/.aliases
 [[ -f ${HOME}/.envars ]] && source ${HOME}/.envars
-[[ -f ${HOME}/.rvmrc ]] && source ${HOME}/.rvmrc
+[[ -f ${HOME}/.rbenvrc ]] && source ${HOME}/.rbenvrc
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
