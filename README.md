@@ -19,6 +19,6 @@ What it *tries* to do
 Usage
 -----
 
-To run the complete setup, run `make`.
-To run a specific target, list the available targets `make list`.
-Pick the appropriate target.
+* To run the complete setup, run `make`.
+* To run a specific target, list the available targets `make list`.
+  Pick the appropriate target.
