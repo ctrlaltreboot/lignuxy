@@ -39,10 +39,20 @@ function ipmisol() {
   ipmitool -H $NODE -I lanplus -U haha -P hoho sol activate
 }
 
-# never uncomment
-# ipmitool -H $NODE -U haha -p hoho chassis identify 1
 function freakthenetops() {
-  for NODE in `cat $HOME/iad1nodes.txt`; do
+  for NODE in `cat $HOME/nodes.txt`; do
+    # never uncomment
+    # ipmitool -H $NODE -U haha -p hoho chassis identify 1
     echo $NODE
   done
+}
+
+copytv() {
+  SRC=$1
+  scp $SRC osmc:/media/GlipGlops/tv/
+}
+
+copymovies() {
+  SRC=$1
+  scp $SRC osmc:/media/GlipGlops/movies/
 }
