@@ -1,5 +1,5 @@
 .PHONY: homebrew vundler ohmyzsh
-        rbenv ansible misc import_dotfiles
+.PHONY: rbenv ansible misc import_dotfiles
 
 homebrew:
 	scripts/homebrew
@@ -26,5 +26,11 @@ import_dotfiles:
 export_dotfiles:
 	scripts/export-dotfiles
 
-all: homebrew vundler ohmyzsh
-     rbenv ansible misc import_dotfiles
+.PHONY: list
+list:
+	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | \
+	awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | \
+	sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
+
+all: homebrew vundler ohmyzsh \
+	rbenv ansible misc import_dotfiles
