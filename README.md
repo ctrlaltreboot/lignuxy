@@ -5,4 +5,5 @@ Sets up my machine for development use.
 
 #### Usage
 
-TBD
+To run the complete setup, run `make`.
+
