@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+DEFAULT_RUBY="2.3.3"
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    brew update
+    brew install rbenv
+    rbenv init
+    rbenv install  ${DEFAULT_RUBY}
+fi
