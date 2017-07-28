@@ -66,8 +66,8 @@ alias acheggit='ansible-playbook -s site.yml -C'
 alias acheggv='ansible-playbook -s site.yml -C --vault-password-file=$HOME/.vault'
 
 # ansible-vault
-alias avaultenc='ansible-vault encrypt --vault-password-file=~/.vault'
-alias avaultdec='ansible-vault decrypt --vault-password-file=~/.vault'
+alias avaultenc='ansible-vault encrypt --vault-password-file=~/.vladvault'
+alias avaultdec='ansible-vault decrypt --vault-password-file=~/.vladvault'
 
 # molecule
 alias molcreate='molecule create'
@@ -75,3 +75,13 @@ alias molconv='molecule converge'
 alias molrm='molecule destroy'
 alias molver='molecule verify'
 alias mologin='molecule login'
+
+# awsm
+alias awsm-nonprod='AWS_PROFILE=nonprod awsm'
+
+# terraform
+alias tf='terraform'
+alias tfg='terraform get'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+
