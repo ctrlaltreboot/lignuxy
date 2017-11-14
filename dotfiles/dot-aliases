@@ -58,9 +58,6 @@ alias ravz='rsync -avz --progress'
 # tarsnap
 alias ts='tarsnap --keyfile ~/.tarsnap.key'
 
-# openvpn
-alias bosvpn='sudo openvpn --config ~/Workspace/tremor/openvpn/boston/client.ovpn &'
-
 # ansibells
 alias acheggit='ansible-playbook -s site.yml -C'
 alias acheggv='ansible-playbook -s site.yml -C --vault-password-file=$HOME/.vault'
@@ -84,4 +81,7 @@ alias tf='terraform'
 alias tfg='terraform get'
 alias tfp='terraform plan'
 alias tfa='terraform apply'
+alias tfw='terraform workspace'
+alias tfs='terraform state'
+alias tfi='terraform init'
 
