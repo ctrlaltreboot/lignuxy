@@ -5,4 +5,5 @@
 [[ -f ${HOME}/.aliases ]] && source ${HOME}/.aliases
 [[ -f ${HOME}/.envars ]] && source ${HOME}/.envars
 [[ -f ${HOME}/.rbenvrc ]] && source ${HOME}/.rbenvrc
+[[ -f ${HOME}/.ddog ]] && source ${HOME}/.ddog
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
