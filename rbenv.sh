@@ -7,4 +7,5 @@ if [[ "$(uname)" == "Darwin" ]]; then
     brew install rbenv
     rbenv init
     rbenv install  ${DEFAULT_RUBY}
+
 fi

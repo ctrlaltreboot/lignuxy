@@ -6,4 +6,13 @@
 [[ -f ${HOME}/.envars ]] && source ${HOME}/.envars
 [[ -f ${HOME}/.rbenvrc ]] && source ${HOME}/.rbenvrc
 [[ -f ${HOME}/.ddog ]] && source ${HOME}/.ddog
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  [[ -f /usr/local/etc/profile.d/autojump.sh ]] && source /usr/local/etc/profile.d/autojump.sh
+elif [[ "$(uname)" == "Linux" ]]; then
+  if [[ "$(basename $SHELL)" == "bash" ]] && [[ -f /usr/share/autojump/autojump.bash ]]; then
+    source /usr/share/autojump/autojump.bash
+  elif [[ $(basename $SHELL) == "zsh" ]] && [[ -f /usr/share/autojump/autojump.zsh ]]; then
+    source /usr/share/autojump/autojump.zsh
+  fi
+fi

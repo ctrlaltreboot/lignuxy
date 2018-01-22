@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# copies dot-<file> to ~/.<file>
+
+# Symlink dotfiles/<dotfile> to ~/.<dotfile>
 
 # turn on nullglob to get array of files without wonky use of ls
 shopt -s nullglob
 DOTFILES=(dotfiles/dot-*)
 
-# iterate through dot-* files array in $DF and symlink it to the $HOME directory
+# iterate through dot-* files array and symlink it to the $HOME directory
 for DF in ${DOTFILES[@]}; do
    D=$(basename ${DF})
    DOTFILE=$HOME/.${D#dot-} # remove dot- prefix

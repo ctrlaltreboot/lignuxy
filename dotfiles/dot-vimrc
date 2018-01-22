@@ -178,9 +178,9 @@ set undodir=~/.vim/backups
 set undofile
 
 "colorscheme
-set t_Co=256
-set background=dark
-colors solarized
+" set t_Co=256
+" set background=dark
+" colors solarized
 
 "------------------------------------------------------------------------------
 " filetypes

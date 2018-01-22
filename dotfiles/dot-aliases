@@ -9,24 +9,6 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bibb='bundle install --path .bundle/bundle'
 
-# berkshelf 3
-alias bebv='bundle exec berks vendor'
-
-# berkshelf 2
-alias bebi='bundle exec berks install'
-alias bebu='bundle exec berks update'
-
-# test-kitchen
-alias bek='bundle exec kitchen'
-alias bekc='bundle exec kitchen converge'
-alias bekv='bundle exec kitchen verify'
-alias bekt='bundle exec kitchen test'
-alias bekl='bundle exec kitchen login'
-
-# knife
-alias ksdb='be knife solo data bag'
-alias kdb='knife solo data bag'
-
 # aws cli
 alias ec2-use1='aws ec2 --region us-east-1'
 alias ec2-usw1='aws ec2 --region us-west-1'
@@ -40,6 +22,7 @@ alias ec2-apse2='aws ec2 --region ap-southeast-2'
 # git
 alias gco='git checkout'
 alias ga='git add'
+alias gap='git add -p'
 alias gc='git commit'
 alias gcv='git commit -v'
 alias gst='git status'
@@ -48,33 +31,31 @@ alias gpr='git pull --rebase'
 alias gba='git branch -a'
 alias gb='git branch'
 alias gri='git rebase -i'
-alias grshow='git remote show origin'
-alias grprune='git remote prune origin'
+alias grso='git remote show origin'
+alias grpo='git remote prune origin'
 
-# ofcmac
-alias ravz-del='rsync -avz --delete --progress'
-alias ravz='rsync -avz --progress'
-
-# tarsnap
-alias ts='tarsnap --keyfile ~/.tarsnap.key'
+# rsync
+alias rs='rsync -avz --progress'
+alias rsdel='rsync -avz --delete --progress'
 
 # ansibells
-alias acheggit='ansible-playbook -s site.yml -C'
-alias acheggv='ansible-playbook -s site.yml -C --vault-password-file=$HOME/.vault'
+alias apc='ansible-playbook -s site.yml -C'
+alias apcv='ansible-playbook -s site.yml -C --vault-password-file=$HOME/.vault'
 
 # ansible-vault
-alias avaultenc='ansible-vault encrypt --vault-password-file=~/.vladvault'
-alias avaultdec='ansible-vault decrypt --vault-password-file=~/.vladvault'
+alias ave='ansible-vault encrypt'
+alias avd='ansible-vault decrypt'
 
 # molecule
-alias molcreate='molecule create'
-alias molconv='molecule converge'
+alias molc='molecule create'
+alias molcv='molecule converge'
 alias molrm='molecule destroy'
-alias molver='molecule verify'
-alias mologin='molecule login'
+alias molv='molecule verify'
+alias molg='molecule login'
 
 # awsm
-alias awsm-nonprod='AWS_PROFILE=nonprod awsm'
+alias awsmn='AWS_PROFILE=nonprod awsm'
+alias awsmp='AWS_PROFILE=prod awsm'
 
 # terraform
 alias tf='terraform'
@@ -84,4 +65,3 @@ alias tfa='terraform apply'
 alias tfw='terraform workspace'
 alias tfs='terraform state'
 alias tfi='terraform init'
-

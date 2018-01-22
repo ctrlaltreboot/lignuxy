@@ -49,10 +49,10 @@ function freakthenetops() {
 
 copytv() {
   SRC=$1
-  scp $SRC osmc:/media/GlipGlops/tv/
+  scp $SRC osmc:/mnt/GlipGlops/tv/
 }
 
 copymovies() {
   SRC=$1
-  scp $SRC osmc:/media/GlipGlops/movies/
+  scp $SRC osmc:/mnt/GlipGlops/movies/
 }
