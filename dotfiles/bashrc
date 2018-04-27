@@ -9,4 +9,4 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-[[ -f $HOME/.myShell ]] && source $HOME/.myShell
+[[ -f $HOME/.my-shell ]] && source $HOME/.my-shell
