@@ -29,7 +29,7 @@ runall() {
 
     for SCRIPT in ${SCRIPTS[@]}; do
         echo "Running $SCRIPT"
-        sh $SCRIPT
+        bash $SCRIPT
     done
     shopt -u nullglob
 }
@@ -50,7 +50,7 @@ chooserun() {
     read -p "Please enter the number of the script you want to run: " OPT
     if [[ "${SCRIPTMAP[$OPT]+foobar}" ]]; then
         echo "Running: ${SCRIPTMAP[$OPT]}"
-        sh "${SCRIPTMAP[$OPT]}"
+        bash "${SCRIPTMAP[$OPT]}"
     else
         echo "Wrong or non-existent choice. Bye."
         exit
