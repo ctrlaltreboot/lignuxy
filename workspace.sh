@@ -2,39 +2,39 @@
 
 : ${SCRIPTDIR:=scripts}
 
-ask2run() {
+ask() {
     local Q="${1}"
-    local RUN=${2}
     while true; do
         read -p "${Q}" ANS
         case $ANS in
-            [yY]* )
-                $RUN
+            [aA]ll|cC* )
+                all
                 break
                 ;;
 
-            [nN]* )
+            [cC]hoose|[cC]* )
+                choose
                 break
                 ;;
             * )
-                echo "Answer: Y/y or N/n."
+                echo "Acceptable inputs: [A/a]ll or [C/c]hoose."
                 ;;
           esac
    done
 }
 
-runall() {
+all() {
     shopt -s nullglob
     local SCRIPTS=($SCRIPTDIR/*)
+    shopt -u nullglob
 
     for SCRIPT in ${SCRIPTS[@]}; do
         echo "Running $SCRIPT"
         bash $SCRIPT
     done
-    shopt -u nullglob
 }
 
-chooserun() {
+choose() {
     echo "Here are available scripts to run:"
     declare -A SCRIPTMAP
     shopt -s nullglob
@@ -59,11 +59,4 @@ chooserun() {
 }
 
 echo "Hello, Welcome to the workspace setup script."
-
-echo "I will ask you some questions now..."
-
-# Run all scripts
-ask2run "Do you want to run all the scripts in $SCRIPTDIR? " runall
-
-# Ask to choose
-ask2run "Do you want to run a script from a list of choices? " chooserun
+ask "You can run [a]ll the scripts in $SCRIPTDIR or [c]hoose from a list > "
