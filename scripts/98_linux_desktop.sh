@@ -5,6 +5,7 @@
 # turn on nullglob to get array of files without wonky use of ls
 shopt -s nullglob
 CONFIGS=(linux-desktop-configs/*)
+shopt -u nullglob
 
 # iterate through files array and symlink it to the $HOME directory
 for C in ${CONFIGS[@]}; do
@@ -15,6 +16,3 @@ for C in ${CONFIGS[@]}; do
     # link config files here
     ln -snfv $(pwd)/$C $APP_CONFIG
 done
-
-# turn off nullglob
-shopt -u nullglob

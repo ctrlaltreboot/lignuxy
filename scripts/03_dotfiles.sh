@@ -5,6 +5,7 @@
 # turn on nullglob to get array of files without wonky use of ls
 shopt -s nullglob
 DOTFILES=(dotfiles/*)
+shopt -u nullglob
 
 # iterate through files array and symlink it to the $HOME directory
 for F in ${DOTFILES[@]}; do
@@ -15,6 +16,3 @@ for F in ${DOTFILES[@]}; do
     # link dotfiles here
     ln -snfv $(pwd)/$F $DOTFILE
 done
-
-# turn off nullglob
-shopt -u nullglob

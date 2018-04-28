@@ -36,9 +36,10 @@ runall() {
 
 chooserun() {
     echo "Here are available scripts to run:"
-    shopt -s nullglob
     declare -A SCRIPTMAP
+    shopt -s nullglob
     local SCRIPTS=($SCRIPTDIR/*)
+    shopt -u nullglob
     local C=0
     for SCRIPT in ${SCRIPTS[@]}; do
         SCRIPTMAP[$C]=$SCRIPT
@@ -55,7 +56,6 @@ chooserun() {
         echo "Wrong or non-existent choice. Bye."
         exit
     fi
-    shopt -u nullglob
 }
 
 echo "Hello, Welcome to the workspace setup script."
