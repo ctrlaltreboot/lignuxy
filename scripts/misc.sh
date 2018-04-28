@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
-# Clone some projects as well
-if [[ "$(uname)" == "Darwin" ]]; then
-  echo "Nothing to Git clone for a Mac this time."
-else
-  git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
-fi
+MISC_DIR=${HOME}/Downloads
+
+REPOS=(
+https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+)
+
+# Clone
+cd $MISC_DIR
+
+for REPO in ${REPOS[@]}; do
+    git clone $REPO
+    echo "Finished cloning ${REPO}"
+done

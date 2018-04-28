@@ -87,6 +87,7 @@ set ruler          " show line and column number
 syntax enable
 set encoding=utf-8
 set visualbell     " shut vim up
+set t_vb=          " shut vim up, really now
 set noerrorbells
 set history=1000
 set autoread
