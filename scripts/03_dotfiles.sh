@@ -8,12 +8,12 @@ DOTFILES=(dotfiles/*)
 
 # iterate through files array and symlink it to the $HOME directory
 for F in ${DOTFILES[@]}; do
-	D=$(basename ${F}) 
-	DOTFILE=$HOME/.${D}
-	# remove existing dotfiles/links
-	[[ -e $DOTFILE ]] && rm -rfv $DOTFILE
-	# link dotfiles here
-	ln -snfv $(pwd)/$F $DOTFILE
+    D=$(basename ${F})
+    DOTFILE=$HOME/.${D}
+    # remove existing dotfiles/links
+    [[ -e $DOTFILE ]] && rm -rfv $DOTFILE
+    # link dotfiles here
+    ln -snfv $(pwd)/$F $DOTFILE
 done
 
 # turn off nullglob
