@@ -55,4 +55,8 @@ echos "Installing latest Docker CD" apt-get install docker-ce
 ME=$(whoami)
 echos "Adding $ME to docker group" gpasswd -a $ME docker
 
+
+echos "Enabling docker service startup" systemctl enable docker.service
+echos "Restarting docker service"  systemctl restart docker.service
+
 echo "Finished installing Docker CE"
