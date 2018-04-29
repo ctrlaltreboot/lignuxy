@@ -16,3 +16,5 @@ elif [[ "$(uname)" == "Linux" ]]; then
         source /usr/share/autojump/autojump.zsh
     fi
 fi
+
+[[ -f ${HOME}/.clownsay ]] && bash ${HOME}/.clownsay

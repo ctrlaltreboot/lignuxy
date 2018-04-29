@@ -1,0 +1,2 @@
+#!/use/bin/env bash
+fortune | cowsay -f head-in
