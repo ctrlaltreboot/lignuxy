@@ -170,6 +170,6 @@ bar {
 }
 
 # start some apps
-# exe --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id redshift-gtk
 # exec --no-startup-id feh --bg-fill
