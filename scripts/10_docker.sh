@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-DIST=xenial
+DIST=$(lsb_release -i | awk '{ print $3 }')
+
+[[ "$DIST" != "Ubuntu" ]] && echo "Not Ubuntu... bail.." && exit
 
 echos() {
     echo $1
@@ -46,7 +48,7 @@ ask "Does this look alright? "
 
 echos "Adding Docker CE repos" add-apt-repository \
       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-      $DIST \
+      $(lsb_release -cs) \
       stable"
 
 update
