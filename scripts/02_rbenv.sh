@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
 
-DEFAULT_RUBY="2.3.3"
+source .helpers
+
+apt() {
+    sudo apt-get install rbenv ruby-build -y
+}
+
+aur() {
+    yaourt-install rbenv-git
+    yaourt-install ruby-install-git
+}
 
 if [[ "$(uname)" == "Darwin" ]]; then
     brew update
     rew install rbenv
 else
-    sudo apt-get install rbenv ruby-build -y
+  arch_or_deb aur apt
 fi
 
 rbenv init
-rbenv install ${DEFAULT_RUBY}
