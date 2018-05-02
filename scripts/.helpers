@@ -1,0 +1,23 @@
+arch_or_deb() {
+    local ARCH=$1
+    local DEB=$2
+
+    which apt-get &> /dev/null
+    local APT=$?
+    which pacman &> /dev/null
+    local PAC=$?
+
+    if (("$APT" < "$PAC")); then
+        $DEB
+    elif (("$PAC" < "$APT")); then
+        $ARCH
+    fi
+}
+
+yaourt-install() {
+    local package=$1
+    if pacman -Qi yaourt &> /dev/null; then
+        echo "Installing with yaourt"
+        yaourt -S --noconfirm $package
+    fi
+}
