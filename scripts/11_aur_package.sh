@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-source .helpers
+source $(dirname $0)/.helpers
 
-PKGS=()
+PKGS=(spotify)
 
 for P in ${PKGS[@]}; do
     yaourt-install $P
