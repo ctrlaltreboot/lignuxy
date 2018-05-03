@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source .helpers
+source $(dirname $0)/.helpers
 
 pac_pkg() {
     sudo pacman -Syu
@@ -14,7 +14,7 @@ pac_pkg() {
     i3lock feh conky scrot unclutter \
     archey3 baobab bleachbit catfish clementine \
     conky curl redshift python python-pip git yaourt \
-    docker lsof
+    docker lsof ledger terraform keepassxc
     }
 
 apt_pkg() {
