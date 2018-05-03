@@ -2,7 +2,7 @@
 
 # mp423
 # sometimes i download mp4s and i want them reduced by 1.
-function mp423() {
+mp423() {
   VIDEO=$1
   AUDIO=$(basename $VIDEO)
 
@@ -15,7 +15,7 @@ function mp423() {
 
 # spacecape, replaces invisible spaces with visible the escaped character equivalent '\n'
 # I use this mostly for making json compatible strings, so the filename output is in json.
-function spacecape() {
+spacecape() {
   SPACED_FILE=$1
   SPACED_JSON=${SPACED_FILE}.json
 
@@ -29,22 +29,48 @@ function spacecape() {
   fi
 }
 
-function ipmireset() {
+ipmireset() {
   NODE=${1?"Error: Missing host/node address"}
   ipmitool -H $NODE -U haha -P hoho chassis power reset
 }
 
-function ipmisol() {
+ipmisol() {
   NODE=${1?"Error: Missing host/node address"}
   ipmitool -H $NODE -I lanplus -U haha -P hoho sol activate
 }
 
-function freakthenetops() {
+freakthenetops() {
   for NODE in `cat $HOME/nodes.txt`; do
     # never uncomment
     # ipmitool -H $NODE -U haha -p hoho chassis identify 1
     echo $NODE
   done
+}
+
+i3exit() {
+    case "$1" in
+        lock)
+            i3lock
+            ;;
+        logout)
+            i3-msg exit
+            ;;
+        suspend)
+            i3lock && systemctl suspend
+            ;;
+        hibernate)
+            i3lock && systemctl hibernate
+            ;;
+        reboot)
+            systemctl reboot
+            ;;
+        shutdown)
+            systemctl poweroff
+            ;;
+        *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+    esac
 }
 
 copytv() {
