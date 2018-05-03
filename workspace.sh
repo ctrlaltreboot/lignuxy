@@ -9,7 +9,7 @@ ask() {
     while true; do
         read -p "${Q}" ANS
         case $ANS in
-            [aA]ll|cC* )
+            [aA]ll|[aA]* )
                 all
                 break
                 ;;
