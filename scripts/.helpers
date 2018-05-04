@@ -21,3 +21,7 @@ yaourt-install() {
         yaourt -S --noconfirm $package
     fi
 }
+
+scriptpath() {
+  SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+}
