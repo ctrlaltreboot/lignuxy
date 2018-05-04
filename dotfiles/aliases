@@ -62,6 +62,11 @@ alias tf='terraform'
 alias tfg='terraform get'
 alias tfp='terraform plan'
 alias tfa='terraform apply'
+alias tfaa='terraform apply -auto-approve'
 alias tfw='terraform workspace'
 alias tfs='terraform state'
 alias tfi='terraform init'
+
+# xclip
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
