@@ -70,3 +70,7 @@ alias tfi='terraform init'
 # xclip
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# services
+alias dockerup='sudo systemctl start docker.service'
+alias sshup='sudo systemctl start sshd.service'
