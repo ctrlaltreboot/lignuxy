@@ -56,3 +56,11 @@ copymovies() {
   SRC=$1
   scp $SRC osmc:/mnt/GlipGlops/movies/
 }
+
+yaourt-install() {
+    local package=$1
+    if pacman -Qi yaourt &> /dev/null; then
+        echo "Installing with yaourt"
+        yaourt -S --noconfirm $package
+    fi
+}
