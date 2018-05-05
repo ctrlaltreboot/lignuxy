@@ -1,4 +1,4 @@
-#!/usr/env/bin bash
+#!/usr/bin/env bash
 
 case "$1" in
     lock)
@@ -20,6 +20,7 @@ case "$1" in
         systemctl poweroff
         ;;
     *)
-    echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
-    exit 2
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 1
+        ;;
 esac
