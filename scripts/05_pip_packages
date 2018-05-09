@@ -7,3 +7,11 @@ for PIP in ${PIPS[@]}; do
     pip install $PIP --upgrade --user
     echo "$PIP installation successful"
 done
+
+PIP3S=(sncli)
+
+for PIP3 in ${PIP3S[@]}; do
+    echo "Installing $PIP3 via pip"
+    pip3 install $PIP3 --upgrade --user
+    echo "$PIP3 installation successful"
+done
