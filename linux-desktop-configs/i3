@@ -220,6 +220,10 @@ bindsym $mod+F8 exec mocp --next
 # App shortcuts
 bindsym $mod+b exec "/usr/bin/firefox"
 
+# Screenshot via scrot functions
+bindsym $mod+Shift+f exec "screenshot"
+bindsym $mod+Shift+w exec "windowscreenshot"
+
 # Redirect sound to headphones
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
@@ -228,4 +232,5 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
+exec --no-startup-id flameshot
 # exec --no-startup-id feh --bg-fill
