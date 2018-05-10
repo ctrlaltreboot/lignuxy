@@ -64,3 +64,11 @@ yaourt-install() {
         yaourt -S --noconfirm $package
     fi
 }
+
+screenshot() {
+  scrot "$HOME/Pictures/screenshot-$(date +%F-%T).jpg"
+}
+
+windowscreenshot() {
+  scrot -s "$HOME/Pictures/window-screenshot-$(date +%F-%T).jpg"
+}
