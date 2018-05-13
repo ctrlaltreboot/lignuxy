@@ -71,10 +71,6 @@ alias tfi='terraform init'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-# services
-alias dockerup='sudo systemctl start docker.service'
-alias sshup='sudo systemctl start sshd.service'
-
 # pacman
 alias pmsearch='pacman -Ss'
 alias pminstall='sudo pacman -S --noconfirm --needed'
