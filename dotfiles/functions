@@ -72,3 +72,18 @@ screenshot() {
 windowscreenshot() {
   scrot -s "$HOME/Pictures/window-screenshot-$(date +%F-%T).jpg"
 }
+
+up() {
+  local SRV=${1?"What goes up?"}
+  sudo systemctl start $SRV.service
+}
+
+down() {
+  local SRV=${1?"What goes down?"}
+  sudo systemctl stop $SRV.service
+}
+
+cycle() {
+  local SRV=${1?"What goes up and down?"}
+  sudo systemctl restart $SRV.service
+}
