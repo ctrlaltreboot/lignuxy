@@ -15,7 +15,7 @@ pac_pkg() {
     archey3 baobab bleachbit catfish clementine \
     conky curl redshift python python-pip git yaourt \
     docker lsof ledger terraform keepassxc xclip \
-    flameshot jq consul vault
+    flameshot jq consul vault pass
     }
 
 apt_pkg() {
