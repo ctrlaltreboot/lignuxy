@@ -8,6 +8,7 @@ call vundle#begin()
 "------------------------------------------------------------------------------
 
 Plugin 'gmarik/vundle'
+Plugin 'ledger/vim-ledger'
 Plugin 'pearofducks/ansible-vim'
 
 Plugin 'tpope/vim-unimpaired'
@@ -195,6 +196,9 @@ function! s:setupWrapping()
 endfunction
 
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
+
+" Ledger
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
