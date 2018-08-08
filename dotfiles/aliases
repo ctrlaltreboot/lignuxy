@@ -74,3 +74,12 @@ alias pbpaste='xclip -selection clipboard -o'
 # pacman
 alias pmsearch='pacman -Ss'
 alias pminstall='sudo pacman -S --noconfirm --needed'
+
+# ecr login
+alias ecrlogin='aws ecr get-login --no-include-email | bash'
+
+# aws vault
+alias aws-vault='aws-vault --backend=file'
+
+# alias focker, cause why not
+alias focker='docker'
