@@ -15,7 +15,7 @@ pac_pkg() {
     archey3 baobab bleachbit catfish clementine \
     conky curl redshift python python-pip git yaourt \
     docker lsof ledger terraform keepassxc xclip \
-    flameshot jq consul vault pass
+    flameshot jq consul vault pass wireguard flatpak\
     }
 
 apt_pkg() {
@@ -25,12 +25,11 @@ apt_pkg() {
     tmux terminator autojump  \
     silversearcher-ag cowsay cowsay-off \
     fortunes fortune-mod fortunes-off \
-    strongswan-nm strongswan \
-    redshift redshift-gtk \
-    i3 fonts-powerline i3status suckless-tools \
+    redshift i3 fonts-powerline i3status suckless-tools \
     i3lock xbacklight feh conky lxappearance \
-    scrot compton unclutter \
-    pasystray paman paprefs pavumeter pulseaudio-module-zeroconf
+    scrot compton unclutter wireguard \
+    pasystray paman paprefs pavumeter \
+    pulseaudio-module-zeroconf flatpak sane \
 }
 
 arch_or_deb pac_pkg apt_pkg
