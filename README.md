@@ -1,11 +1,11 @@
-setdev
+setty
 ======
 
 Sets up a Linux machine
 
 What it *tries* to do
 ---------------------
-On an Debian/Ubuntu and most of its derivatives.
+On an Debian/Ubuntu/Antergos...
 * Install packages
 * Install vundler and install vim plugins
 * Install rbenv
@@ -18,7 +18,7 @@ On an Debian/Ubuntu and most of its derivatives.
 Usage
 -----
 ```
-./workspace.sh
+./setty
 
 ```
 
