@@ -74,8 +74,9 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 # pacman
-alias pacsearch='pacman -Ss'
-alias pacinstall='sudo pacman -S --noconfirm --needed'
+alias pfind='pacman -Ss'
+alias prm='pacman -Rs'
+alias pinstall='sudo pacman -S --noconfirm --needed'
 
 # ecr login
 alias ecrlogin='aws ecr get-login --no-include-email | bash'
