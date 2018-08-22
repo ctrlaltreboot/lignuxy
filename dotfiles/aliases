@@ -37,6 +37,8 @@ alias grpo='git remote prune origin'
 # rsync
 alias rs='rsync -avz --progress'
 alias rsdel='rsync -avz --delete --progress'
+alias rsdeldups='rsync -avz --delete --progress --ignore-existing'
+alias rsnodups='rsync -avz --progress --ignore-existing'
 
 # ansibells
 alias apc='ansible-playbook -s site.yml -C'
@@ -72,8 +74,8 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 # pacman
-alias pmsearch='pacman -Ss'
-alias pminstall='sudo pacman -S --noconfirm --needed'
+alias pacsearch='pacman -Ss'
+alias pacinstall='sudo pacman -S --noconfirm --needed'
 
 # ecr login
 alias ecrlogin='aws ecr get-login --no-include-email | bash'
