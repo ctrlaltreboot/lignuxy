@@ -26,4 +26,4 @@ cp -avxr image/font/gofont/ttfs/* .
 # cleanup
 rm -rfv *.zip image
 
-[[ "$(uname)" != "Darwin" ]] && fc-cache -f -v
+fc-cache -f -v

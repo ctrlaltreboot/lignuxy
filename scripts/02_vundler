@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
+set -x
 
-VIM_BUNDLE="~/.vim/bundle"
+VIM_BUNDLE="$HOME/.vim/bundle"
 
 [[ ! -e $VIM_BUNDLE ]] && rm -rfv $VIM_BUNDLE && mkdir -pv $VIM_BUNDLE
+
+exit
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall

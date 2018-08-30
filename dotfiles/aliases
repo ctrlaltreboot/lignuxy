@@ -39,6 +39,8 @@ alias rs='rsync -avz --progress'
 alias rsdel='rsync -avz --delete --progress'
 alias rsdeldups='rsync -avz --delete --progress --ignore-existing'
 alias rsnodups='rsync -avz --progress --ignore-existing'
+alias sshync='rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress --ignore-existing'
+
 
 # ansibells
 alias apc='ansible-playbook -s site.yml -C'
@@ -86,3 +88,12 @@ alias aws-vault='aws-vault --backend=file'
 
 # alias focker, cause why not
 alias focker='docker'
+
+# flatpacks
+alias slack='flatpak run com.slack.Slack'
+alias spotify='com.spotify.Client'
+alias focuswriter='org.gottcode.FocusWriter'
+alias signal='org.signal.Signal'
+alias telegram='org.telegram.desktop'
+alias vlc='org.videolan.VLC'
+alias paperwork='work.openpaper.Paperwork'

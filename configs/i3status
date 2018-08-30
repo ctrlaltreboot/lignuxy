@@ -102,4 +102,3 @@ volume master {
     mixer = "Master"
     mixer_idx = 0
 }
-

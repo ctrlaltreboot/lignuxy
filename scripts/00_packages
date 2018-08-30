@@ -1,35 +1,15 @@
 #!/usr/bin/env bash
 
-source $(dirname $0)/.helpers
-
-pac_pkg() {
-    sudo pacman -Syu
-    sudo pacman -S --noconfirm --needed \
-    vim openssh zsh \
-    tmux terminator \
-    autojump the_silver_searcher \
-    networkmanager-strongswan strongswan \
-    cowsay cowfortune fortune-mod \
-    powerline-fonts i3status \
-    i3lock feh conky scrot unclutter \
-    archey3 baobab bleachbit catfish clementine \
-    conky curl redshift python python-pip git yaourt \
-    docker lsof ledger terraform keepassxc xclip \
-    flameshot jq consul vault pass wireguard flatpak\
-    }
-
-apt_pkg() {
-    sudo apt-get update -y
-    sudo apt-get install -y \
-    vim ssh zsh \
-    tmux terminator autojump  \
+sudo apt-get update && sudo apt install -y \
+    git vim ssh zsh curl \
+    tmux terminator autojump \
     silversearcher-ag cowsay cowsay-off \
     fortunes fortune-mod fortunes-off \
     redshift i3 fonts-powerline i3status suckless-tools \
     i3lock xbacklight feh conky lxappearance \
-    scrot compton unclutter wireguard \
-    pasystray paman paprefs pavumeter \
-    pulseaudio-module-zeroconf flatpak sane \
-}
-
-arch_or_deb pac_pkg apt_pkg
+    scrot compton unclutter flameshot fonts-font-awesome \
+    pulseaudio-module-zeroconf sane \
+    build-essential libssl-dev \
+    libffi-dev python-dev \
+    python-pip python-setuptools \
+    python-virtualenv rbenv ruby-build

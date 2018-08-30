@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo pip install --upgrade pip
+
 PIPS=(ansible awscli)
 
 for PIP in ${PIPS[@]}; do

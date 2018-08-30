@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install -y flatpak
+
+APPS=(
+com.slack.Slack
+com.spotify.Client
+org.videolan.VLC
+org.telegram.desktop
+org.signal.Signal
+org.gottcode.FocusWriter
+work.openpaper.Paperwork
+)
+
+echo "We need to reboot, is this ok?"
+
+for APP in ${APPS[@]}; do
+    flatpak install -y flathub $APP
+done
