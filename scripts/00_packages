@@ -5,7 +5,7 @@ sudo apt-get update && sudo apt install -y \
     tmux terminator autojump \
     silversearcher-ag cowsay cowsay-off \
     fortunes fortune-mod fortunes-off \
-    redshift i3-wm fonts-powerline i3status suckless-tools \
+    redshift i3 fonts-powerline i3status suckless-tools \
     i3lock xbacklight feh conky lxappearance \
     scrot compton unclutter flameshot fonts-font-awesome \
     pulseaudio-module-zeroconf sane \

@@ -185,7 +185,7 @@ bindsym $mod+Pause mode "$mode_system"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    status_command i3status
 }
 
 # Multimedia Keys
@@ -221,18 +221,8 @@ bindsym $mod+F6 exec mocp --stop
 bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
-# App shortcuts
-bindsym $mod+b exec "/usr/bin/firefox"
-
-# Screenshot via scrot functions
-bindsym $mod+Shift+f exec "screenshot"
-bindsym $mod+Shift+w exec "windowscreenshot"
-
-# Redirect sound to headphones
-bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
-
 # Autostart apps
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l -37.814:144.96332 -t 6500K:4000K
