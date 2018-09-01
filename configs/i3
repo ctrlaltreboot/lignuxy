@@ -207,8 +207,8 @@ bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 #bindsym XF86AudioPrev exec playerctl previous
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 bindsym XF86AudioPlay exec mocp --toggle-pause
 bindsym XF86AudioPause exec mocp --toggle-pause
