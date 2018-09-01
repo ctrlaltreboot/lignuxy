@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+APPS=(
+com.slack.Slack
+com.spotify.Client
+org.videolan.VLC
+org.telegram.desktop
+org.signal.Signal
+org.gottcode.FocusWriter
+work.openpaper.Paperwork
+)
+
+for APP in ${APPS[@]}; do
+    flatpak install -y flathub $APP
+done
