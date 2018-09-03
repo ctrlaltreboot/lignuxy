@@ -12,4 +12,5 @@ sudo apt-get update && sudo apt install -y \
     build-essential libssl-dev \
     libffi-dev python-dev \
     python-pip python-setuptools \
-    python-virtualenv rbenv ruby-build
+    python-virtualenv rbenv ruby-build \
+    zbar-tools imagemagick libqrencode-dev
