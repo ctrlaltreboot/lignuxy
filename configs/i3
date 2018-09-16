@@ -228,3 +228,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l -37.814:144.96332 -t 6500K:4000K
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/Pictures/minimal.jpg
+#disable caps lock switch
+exec --no-startup-id xmodmap -e "clear lock"
+#set caps_lock as escape
+exec --no-startup-id xmodmap -e "keysym Caps_Lock = Control_L"
