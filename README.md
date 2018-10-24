@@ -20,7 +20,6 @@ Usage
 -----
 ```
 ./penguiniser
-
 ```
 
 This script will let you choose to run all the scripts in `scripts` or
