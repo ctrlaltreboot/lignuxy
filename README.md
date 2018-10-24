@@ -1,7 +1,7 @@
-setty
+Lignuxy
 ======
 
-Sets up a Debian/Ubuntu machine my way
+Sets up a Debian/Ubuntu machine and learn more scripting along the way...
 
 What it *tries* to do
 ---------------------
@@ -19,7 +19,7 @@ On an Debian/Ubuntu
 Usage
 -----
 ```
-./setty
+./penguiniser
 
 ```
 
