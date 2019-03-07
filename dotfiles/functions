@@ -13,6 +13,11 @@ mp423() {
   fi
 }
 
+curlcode() {
+    local URL=$1
+    curl -s -o /dev/null -w "%{http_code}" "${URL}"
+}
+
 # spacecape, replaces invisible spaces with visible the escaped character equivalent '\n'
 # I use this mostly for making json compatible strings, so the filename output is in json.
 spacecape() {

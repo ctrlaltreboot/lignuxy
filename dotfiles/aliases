@@ -39,8 +39,8 @@ alias rs='rsync -avz --progress'
 alias rsdel='rsync -avz --delete --progress'
 alias rsdeldups='rsync -avz --delete --progress --ignore-existing'
 alias rsnodups='rsync -avz --progress --ignore-existing'
-alias sshync='rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress --ignore-existing'
-
+alias sshync='rsync -avz -e "ssh -o stricthostkeychecking=no -o userknownhostsfile=/dev/null" --progress --ignore-existing'
+alias kodisync='rsync -avz -e "ssh -o stricthostkeychecking=no -o userknownhostsfile=/dev/null" --progress --ignore-existing --rsync-path=/storage/.kodi/addons/virtual.network-tools/bin/rsync'
 
 # ansibells
 alias apc='ansible-playbook -s site.yml -C'
@@ -72,8 +72,8 @@ alias tfs='terraform state'
 alias tfi='terraform init'
 
 # xclip
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+alias copypb='xclip -selection clipboard'
+alias pastepb='xclip -selection clipboard -o'
 
 # pacman
 alias pfind='pacman -Ss'
