@@ -2,7 +2,7 @@
 
 set -e
 
-: ${SCRIPTDIR:=scripts}
+: ${SCRIPT_DIR:=scripts}
 
 ask() {
     local Q="${1}"
@@ -27,7 +27,7 @@ ask() {
 
 all() {
     shopt -s nullglob
-    local SCRIPTS=($SCRIPTDIR/*)
+    local SCRIPTS=($SCRIPT_DIR/*)
     shopt -u nullglob
 
     for SCRIPT in ${SCRIPTS[@]}; do
@@ -38,22 +38,22 @@ all() {
 
 choose() {
     echo "Here are available scripts to run:"
-    declare -A SCRIPTMAP
+    declare -A SCRIPT_MAP
     shopt -s nullglob
-    local SCRIPTS=($SCRIPTDIR/*)
+    local SCRIPTS=($SCRIPT_DIR/*)
     shopt -u nullglob
     local C=0
     for SCRIPT in ${SCRIPTS[@]}; do
-        SCRIPTMAP[$C]=$SCRIPT
+        SCRIPT_MAP[$C]=$SCRIPT
         ((C=C+1))
     done
-    for K in ${!SCRIPTMAP[@]}; do
-        echo "[$K]: $(basename ${SCRIPTMAP[$K]})"
+    for K in ${!SCRIPT_MAP[@]}; do
+        echo "[$K]: $(basename ${SCRIPT_MAP[$K]})"
     done
     read -p "Please enter the number of the script you want to run: " OPT
-    if [[ "${SCRIPTMAP[$OPT]+foobar}" ]]; then
-        echo "Running: ${SCRIPTMAP[$OPT]}"
-        bash "${SCRIPTMAP[$OPT]}"
+    if [[ "${SCRIPT_MAP[$OPT]+foobar}" ]]; then
+        echo "Running: ${SCRIPT_MAP[$OPT]}"
+        bash "${SCRIPT_MAP[$OPT]}"
     else
         echo "Wrong or non-existent choice. Bye."
         exit
@@ -61,4 +61,4 @@ choose() {
 }
 
 echo "Hello, Welcome to the workspace setup script."
-ask "You can run [a]ll the scripts in $SCRIPTDIR or [c]hoose from a list > "
+ask "You can run [a]ll the scripts in $SCRIPT_DIR or [c]hoose from a list > "
