@@ -1,0 +1,30 @@
+sudo apt install -y \
+  automake autoconf libreadline-dev \
+  libncurses-dev libssl-dev libyaml-dev \
+  libxslt-dev libffi-dev libtool unixodbc-dev \
+  unzip curl
+
+if [[ ! -d ~/.asdf ]]; then
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+  cd ~/.asdf
+  git checkout "$(git describe --abbrev=0 --tags)"
+  asdf update
+fi
+
+
+source ${HOME}/.asdf/asdf.sh
+source ${HOME}/.asdf/completions/asdf.bash
+
+plugins=(java \
+  nodejs ruby python \
+  terraform minikube \
+  vault golang kubectl \
+  direnv sbt scala \
+  solidity terraform-docs \
+  terraform-validator terragrunt \
+  tflint yq packer nomad shellcheck)
+
+for plugin in ${plugins[@]}; do
+  asdf plugin add $plugin
+  asdf install $plugin latest
+done

@@ -7,4 +7,6 @@ sudo apt-get update && sudo apt install -y \
   pulseaudio-module-zeroconf sane \
   libffi-dev make build-essential libssl-dev zlib1g-dev libbz2-dev \
   libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-  xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+  xz-utils tk-dev libffi-dev liblzma-dev python-openssl git fonts-firacode fonts-hack-ttf \
+  fonts-font-awesome fonts-inconsolata fonts-hack-web \
+  whois mdadm lvm2 nmap firefox

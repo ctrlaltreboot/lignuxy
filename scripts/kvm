@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+CPUS=$(egrep -c '(vmx|svm)' /proc/cpuinfo)
+
+if [[ "$CPUS" == "0" ]]; then
+  abort "CPU doesn't support hardware virtualization. Exiting"
+fi
+
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+sudo adduser `id -un` libvirt
+groups | grep --color "libvirt"
+
+echo "Installed and configured system for KVM, relogin to take effect"
+echo "Run $> virsh list --all to check on next login"

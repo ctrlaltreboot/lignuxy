@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt-get install -y \
-  fonts-firacode fonts-hack-ttf \
-  fonts-font-awesome fonts-inconsolata font-hack
-
-
 URLS=(
 https://github.com/belluzj/fantasque-sans/releases/download/v1.7.2/FantasqueSansMono-Normal.zip
 )
@@ -12,19 +7,19 @@ https://github.com/belluzj/fantasque-sans/releases/download/v1.7.2/FantasqueSans
 # Download bare font packages into the local font directory
 FONTS_DIR=${HOME}/.fonts
 
-[[ ! -d ${FONTS_DIR} ]] && mkdir -v ${FONTS_DIR} && cd ${FONTS_DIR}
+[[ ! -d ${FONTS_DIR} ]] && mkdir -v "${FONTS_DIR}" && cd "${FONTS_DIR}" || return
 
-for URL in ${URLS[@]}; do
-    FPKG="$(basename ${URL})"
-    curl -fsSLO ${URL}
+for URL in "${URLS[@]}"; do
+    FPKG=$(basename "${URL}")
+    curl -fsSLO "${URL}"
     echo "Finished downloading ${FPKG}"
-    if [[ "${FKG##*.}" == "zip" ]]; then
-        unzip -u ${FPKG}
+    if [[ "${FPKG##*.}" == "zip" ]]; then
+        unzip -u "${FPKG}"
     fi
 done
 
 # cleanup
-rm -rfv *.zip image
+rm -rfv ./*.zip image
 
 # update the fonts
 fc-cache -f -v
