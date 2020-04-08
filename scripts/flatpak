@@ -7,11 +7,16 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 APPS=(
 com.slack.Slack
-com.spotify.Client
 org.telegram.desktop
 org.gottcode.FocusWriter
 work.openpaper.Paperwork
+com.visualstudio.code.oss
+com.jetbrains.IntelliJ-IDEA-Community
+org.signal.Signal
+com.bitwarden.desktop
+io.github.hakuneko.HakuNeko
 )
+
 
 for APP in "${APPS[@]}"; do
     flatpak install -y flathub "$APP"
