@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+sudo apt install gnupg zsh cryptsetup pinentry-curses steghide -y
+
+TOMB_VER="2.7"
+
+wget https://files.dyne.org/tomb/Tomb-"$TOMB_VER".tar.gz && \
+  tar xvfz Tomb-"$TOMB_VER".tar.gz &&  \
+  cd Tomb-"$TOMB_VER" && \
+  sudo make install &&
+  rm -rfv Tomb-"$TOMB_VER"
