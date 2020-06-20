@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
+LOC=$(command -v tomb)
 
-sudo apt install gnupg zsh cryptsetup pinentry-curses steghide -y
+if [[ -n "$LOC" ]]; then
+  echo "Tomb is already installed in $LOC"
+  exit 0
+else
+  sudo apt install gnupg zsh cryptsetup pinentry-curses steghide -y
 
-TOMB_VER="2.7"
+  TOMB_VER="2.7"
 
-wget https://files.dyne.org/tomb/Tomb-"$TOMB_VER".tar.gz && \
-  tar xvfz Tomb-"$TOMB_VER".tar.gz &&  \
-  cd Tomb-"$TOMB_VER" && \
-  sudo make install &&
-  rm -rfv Tomb-"$TOMB_VER"
+  wget https://files.dyne.org/tomb/Tomb-"$TOMB_VER".tar.gz && \
+    tar xvfz Tomb-"$TOMB_VER".tar.gz &&  \
+    cd Tomb-"$TOMB_VER" && \
+    sudo make install &&
+    rm -rfv Tomb-"$TOMB_VER" Tomb-"$TOMB_VER".tar.gz
+fi

@@ -3,13 +3,15 @@
 sudo add-apt-repository ppa:wireguard/wireguard
 
 sudo apt-get update && sudo apt install -y \
-  git vim ssh zsh curl tmux terminator autojump \
+  git vim ssh zsh curl tmux autojump \
   silversearcher-ag cowsay cowsay-off fortunes fortune-mod fortunes-off \
-  suckless-tools feh conky lxappearance scrot compton unclutter flameshot \
+  feh conky scrot compton unclutter \
   pulseaudio-module-zeroconf sane \
   libffi-dev make build-essential libssl-dev zlib1g-dev libbz2-dev \
   libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
   xz-utils tk-dev libffi-dev liblzma-dev python-openssl git fonts-firacode fonts-hack-ttf \
   fonts-font-awesome fonts-inconsolata fonts-hack-web \
   whois mdadm lvm2 nmap firefox wireguard network-manager-openvpn-gnome\
-  i3 i3status
+  ctop
+
+
