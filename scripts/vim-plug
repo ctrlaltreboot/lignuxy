@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+PLUG="$HOME/.vim/plugged"
+[[ ! -e $PLUG ]] && rm -rfv "$PLUG" && mkdir -pv "$PLUG"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+vim +PlugInstall

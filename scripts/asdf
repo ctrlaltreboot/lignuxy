@@ -17,14 +17,11 @@ fi
 source ${HOME}/.asdf/asdf.sh
 source ${HOME}/.asdf/completions/asdf.bash
 
-plugins=(java \
-  nodejs ruby python \
-  terraform minikube \
-  vault golang kubectl \
-  direnv sbt scala \
-  solidity terraform-docs \
-  terraform-validator terragrunt \
-  tflint yq packer nomad shellcheck)
+plugins=(direnv golang java kubectl \
+  minikube nodejs nomad packer python ruby \
+  sbt scala shellcheck solidity \
+  terraform terraform-docs terraform-validator terragrunt tflint \
+  vault yq)
 
 for plugin in ${plugins[@]}; do
   asdf plugin add $plugin

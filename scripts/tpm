@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+## Tmux
+echo "Setting up tmux plugin manager"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
