@@ -13,7 +13,7 @@ sudo apt update && sudo apt install -y \
     pinentry-curses python-openssl \
     scrot silversearcher-ag software-properties-common ssh steam-installer steghide  \
     tk-dev tmux \
-    unclutter unixodbc-dev unzip uxrvt \
+    unclutter unixodbc-dev unzip \
     vim \
     wget whois wireguard \
     xclip xsel xz-utils \
