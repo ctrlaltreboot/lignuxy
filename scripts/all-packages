@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
-sudo apt update && sudo apt install -y \
+sudo apt-get update && sudo apt install -y \
     apt-transport-https autoconf autojump automake \
     build-essential \
-    ca-certificates compton conky cowsay cowsay-off cryptsetup ctop curl \
-    feh fonts-firacode fonts-font-awesome fonts-hack-ttf fonts-hack-web fonts-inconsolata fortune-mod fortunes fortunes-off  \
+    ca-certificates compton conky cowsay \
+    cowsay-off cryptsetup ctop curl \
+    feh fonts-firacode fonts-font-awesome fonts-hack-ttf \
+    fonts-hack-web fonts-inconsolata fortune-mod fortunes fortunes-off  \
     git gnupg \
     hibernate kitty \
-    libbz2-dev libffi-dev liblzma-dev libncurses5-dev libncurses-dev libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev libtool libxslt1-dev libyaml-dev \
+    libbz2-dev libffi-dev liblzma-dev \
+    libncurses5-dev libncurses-dev \
+    libncursesw5-dev libreadline-dev libsqlite3-dev \
+    libssl-dev libtool libxslt1-dev libyaml-dev \
     make mdadm \
     nmap \
     pinentry-curses python-openssl \
