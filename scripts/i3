@@ -2,7 +2,5 @@
 set -ex
 
 ## i3
-sudo add-apt-repository ppa:kgilmer/speed-ricer
 sudo apt-get update
-sudo apt install -y i3-gaps polybar nitrogen imagemagick
-pip3 install --user pywal
+sudo apt install -y i3 polybar nitrogen imagemagick

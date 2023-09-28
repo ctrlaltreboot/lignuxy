@@ -8,7 +8,7 @@ if [[ -n "$HAVETOMB" ]]; then
 else
   sudo apt install gnupg zsh cryptsetup pinentry-curses steghide -y
 
-  TOMB_VER="2.9"
+  TOMB_VER="2.10"
 
   wget https://files.dyne.org/tomb/Tomb-"$TOMB_VER".tar.gz && \
     tar xvfz Tomb-"$TOMB_VER".tar.gz &&  \

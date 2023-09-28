@@ -19,7 +19,7 @@ source ${HOME}/.asdf/completions/asdf.bash
 
 plugins=(direnv golang kubectl \
   minikube nodejs nomad packer python ruby \
-  shellcheck solidity \
+  shellcheck \
   terraform terraform-docs \
   terraform-validator terragrunt tflint \
   vault yq)

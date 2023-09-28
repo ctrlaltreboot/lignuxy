@@ -4,19 +4,19 @@ sudo apt-get update && sudo apt install -y \
     apt-transport-https autoconf autojump automake \
     build-essential \
     ca-certificates compton conky cowsay \
-    cowsay-off cryptsetup ctop curl \
+    cowsay-off cryptsetup curl \
     feh fonts-firacode fonts-font-awesome fonts-hack-ttf \
-    fonts-hack-web fonts-inconsolata fortune-mod fortunes fortunes-off  \
+    fonts-hack-web fonts-inconsolata fortune-mod fortunes  \
     git gnupg \
-    hibernate kitty \
+    kitty \
     libbz2-dev libffi-dev liblzma-dev \
     libncurses5-dev libncurses-dev \
     libncursesw5-dev libreadline-dev libsqlite3-dev \
     libssl-dev libtool libxslt1-dev libyaml-dev \
     make mdadm \
     nmap \
-    pinentry-curses python-openssl \
-    scrot silversearcher-ag software-properties-common ssh steam-installer steghide  \
+    pinentry-curses \
+    scrot silversearcher-ag software-properties-common ssh steghide  \
     tk-dev tmux \
     unclutter unixodbc-dev unzip \
     vim \
